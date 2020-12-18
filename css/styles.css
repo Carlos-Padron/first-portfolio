@@ -4,8 +4,9 @@
   --primary: #232931;
   --secondary: #24262b;
   --accent: #63f5aa;
-  --norma: #7c7f86;
+  --unfocus: #7c7f86;
   --border: #2d2e32;
+  --text: #eeeeee;
 }
 
 * {
@@ -14,6 +15,21 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: var(--primary);
+  overflow-x: hidden;
+}
+
+h4 {
+  margin: 0;
+}
+
+section {
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+/* NAVBAR */
 nav {
   background-color: var(--primary);
 }
@@ -21,8 +37,11 @@ nav {
 nav {
   min-height: 8vh;
   display: flex;
-  justify-content: space-around !important;
+  justify-content: space-between !important;
   align-items: center !important;
+  position: relative;
+  margin-left: 35px;
+  margin-right: 35px;
 }
 
 .logo {
@@ -37,7 +56,7 @@ nav {
 
 .nav-links li {
   list-style: none;
-  margin-left: 60px;
+  margin-left: 40px;
 }
 
 .nav-links a {
@@ -84,22 +103,22 @@ ul {
 }
 
 @media screen and (max-width: 768px) {
-  body {
+  /* body {
     overflow-x: hidden !important;
-  }
+  } */
 
   .nav-links {
     position: absolute;
     right: 0;
+    width: 65%;
     height: 92vh;
     top: 8vh;
     background-color: var(--primary);
     display: flex;
     flex-direction: column;
     justify-content: center !important ;
-    transform: translateX(100%);
+    transform: translateX(135%);
     transition: transform 0.2s ease-in;
-    width: 65%;
   }
 
   .nav-links li {
@@ -127,4 +146,90 @@ ul {
 .toggle .line3 {
   width: 25px;
   transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* ICONS */
+
+.hover-icon {
+  color: var(--accent);
+  font-size: 30px;
+}
+
+.hover-icon:hover {
+  color: var(--text);
+}
+
+/* TEXT */
+
+.text {
+  color: var(--text);
+}
+
+.fira {
+  font-family: "Fira Mono", monospace !important;
+}
+
+/* HERO */
+
+#hero {
+  /* height: 90vh; */
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.whoami {
+  margin-bottom: 50px;
+  font-size: 50px;
+}
+
+.intro {
+  margin-bottom: 50px;
+}
+
+.circle {
+  height: 60px;
+  width: 60px;
+  margin-bottom: 20px;
+  background-color: var(--secondary);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+.contact-row {
+  display: flex;
+  justify-items: start;
+  align-items: baseline;
+}
+
+#contact2 {
+  display: none;
+}
+
+.hero-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.circle-img {
+  max-width: 80%;
+  height: auto;
+}
+@media screen and (max-width: 767px) {
+  #contact1 {
+    display: none;
+  }
+  #contact2 {
+    display: initial;
+  }
 }
