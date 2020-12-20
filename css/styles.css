@@ -7,7 +7,7 @@
   --unfocus-color: #7c7f86;
   --border-color: #2d2e32;
   --text-color: #eeeeee;
-  --title: 3em;
+  --title: 2.4em;
   --sub-title: 1.5em;
   --content-title: 1.1em;
   --content-sub-title: 2em;
@@ -289,12 +289,26 @@ ul {
   height: 100vh;
 }
 
+
+.experience-list{
+  list-style-type: "$ "; padding-inline-start: 1ch;
+}
+
+@media screen and (max-width: 767px) {
+  #experience {
+    height: auto;
+      padding-bottom: 5rem;
+  }
+}
+
+
+
+
 /* Tabs */
 
 .tabs {
   width: auto;
   height: 400px;
-  padding: 30px 20px;
   background: var(--primary-color);
   overflow: hidden;
 }
@@ -305,6 +319,10 @@ ul {
   height: 100%;
   border-right: 3px solid #eeeeee;
   padding: 50px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .tabs .tab-header > div {
@@ -322,10 +340,15 @@ ul {
   color: var(--accent-color);
 }
 
+.tabs .tab-header > div.active::before {
+  content: ">_ " !important;
+}
+
 .tabs .tab-content {
   position: relative;
   height: 100%;
   overflow: hidden;
+  padding-left: 50px;
 }
 
 .tabs .tab-content > div {
@@ -341,7 +364,7 @@ ul {
 
 @media (max-width: 700px) {
   .tabs {
-    width: 100vw;
+    /* width: 100vw; */
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -350,15 +373,39 @@ ul {
     width: 100%;
     border: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 10px 0px;
     height: auto;
+    flex-direction: row;
     text-align: center;
   }
   .tabs .tab-header > div {
-    width: 25%;
+    width: auto;
   }
   .tabs .tab-indicator {
     display: none;
   }
+
+  .tabs .tab-content {
+    padding-left: 0px;
+    width: 95%;
+  }
+}
+
+/* Projects */
+
+#projects {
+  background-color: var(--secondary-color);
+  height: 100vh;
+}
+
+.card {
+  border-radius: 23px;
+  background-color: var(--primary-color);
+  border: none;
+  padding: 1rem;
+}
+
+.card-title {
+  color: var(--accent-color);
 }
