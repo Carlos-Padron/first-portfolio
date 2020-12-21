@@ -85,6 +85,7 @@ h4 {
 
 /* NAVBAR */
 nav {
+  z-index: 2;
   background-color: var(--primary-color);
   min-height: 8vh;
   display: flex;
@@ -110,9 +111,17 @@ nav {
 }
 
 .nav-links a {
-  color: var(--accent-color);
+  color: var(--unfocus-color);
   text-decoration: none;
   font-weight: bold;
+}
+
+.nav-links a.active {
+  color: var(--accent-color);
+}
+
+.nav-links a:hover {
+  color: var(--accent-color);
 }
 
 ul {
@@ -266,6 +275,7 @@ ul {
   #hero {
     height: auto;
     padding-bottom: 2rem ;
+    min-height: 800px;
   }
 }
 
@@ -475,3 +485,5 @@ ul {
 
   }
 }
+
+

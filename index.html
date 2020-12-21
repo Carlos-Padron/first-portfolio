@@ -15,22 +15,31 @@
     />
     <!-- LineIcons -->
     <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet" />
-
+    <!-- Animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+    integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+    crossorigin="anonymous"
+  ></script>
     <link rel="stylesheet" href="./css/styles.css" />
-    <title>Carlos Padron</title>
+    <title>Carlos Padrón</title>
   </head>
-  <body>
-    <nav>
-      <div><h4 class="logo">&lt Carlos Padron &gt</h4></div>
+  <body style="overflow-x: hidden">
+    <nav class="d-none">
+      <div><h4 class="logo">&lt Carlos Padrón &gt</h4></div>
       <ul class="nav-links">
         <li>
-          <a href="#">&lt About &gt</a>
+          <a href="#about">&lt About &gt</a>
         </li>
         <li>
-          <a href="#">&lt Experience &gt</a>
+          <a href="#experience">&lt Experience &gt</a>
         </li>
         <li>
-          <a href="#">&lt Projects &gt</a>
+          <a href="#projects">&lt Projects &gt</a>
         </li>
       </ul>
       <div class="burger">
@@ -46,13 +55,13 @@
             class="col-md-6 col-sm-12 d-flex flex-column justify-content-center"
           >
             <div class="intro">
-              <h1 class="text whoami title-fs">$ whoami</h1>
-              <h5 class="text sub-title-fs">Hi, I’m Carlos Padron.</h5>
-              <h5 class="text sub-title-fs">
+              <h1 class="text whoami title-fs d-none">$ whoami</h1>
+              <h5 class="text sub-title-fs d-none">Hi, I’m Carlos Padrón.</h5>
+              <h5 class="text sub-title-fs d-none">
                 I develop web and mobile solutions.
               </h5>
             </div>
-            <div id="contact1" class="contact">
+            <div id="contact1" class="contact d-none">
               <div class="contact-row">
                 <div class="circle">
                   <a target="_blank" href="mailto:c_0509@hotmail.com">
@@ -93,14 +102,14 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-sm-12 hero-img">
+          <div class="col-md-6 col-sm-12 d-none hero-img">
             <img
               src="./images/hero-img.png"
               class="img-fluid"
               style="object-fit: contain"
               srcset=""
             />
-            <div id="contact2" class="contact mt-4">
+            <div id="contact2" class="contact mt-4 d-none">
               <div class="contact-row">
                 <div class="circle">
                   <a target="_blank" href="mailto:c_0509@hotmail.com">
@@ -148,11 +157,13 @@
     <section id="about">
       <div class="secction-container">
         <div class="row text-center secction-header">
-          <h1 class="title-color title-fs">&lt About &gt</h1>
+          <h1 class="title-color title-fs animate__animated animate__bounce">
+            &lt About &gt
+          </h1>
         </div>
         <div class="row mb-10">
           <div
-            class="col-md-6 col-sm-12 d-flex flex-column justify-content-center"
+            class="col-md-6 col-sm-12 d-flex flex-column justify-content-center wow bounceInUp"
             style="margin-bottom: 40px"
           >
             <img
@@ -162,9 +173,9 @@
               srcset=""
             />
           </div>
-          <div class="col-md-6 col-sm-12">
+          <div class="col-md-6 col-sm-12 wow bounceInUp">
             <h3 class="text sub-title-fs">
-              Hello! I’m Carlos Padron, a software engineer graduated from
+              Hello! I’m Carlos Padrón, a software engineer graduated from
               Northeastern University (UNE) in Mexico.
             </h3>
             <br />
@@ -484,7 +495,7 @@
             <h1 class="title-color title-fs">&lt Other projects &gt</h1>
           </div>
           <!-- First other project -->
-          <div class="col-md-6 col-sm-12">
+          <div class="col-md-6 col-sm-12 mb-5">
             <div class="card">
               <div class="card-body">
                 <div class="d-flex justify-content-between">
@@ -520,7 +531,7 @@
             </div>
           </div>
           <!-- second other project -->
-          <div class="col-md-6 col-sm-12">
+          <div class="col-md-6 col-sm-12 mb-5">
             <div class="card">
               <div class="card-body">
                 <div class="d-flex justify-content-between">
@@ -557,7 +568,7 @@
       </div>
     </section>
 
-    <footer>
+    <footer class="pt-4 pb-2">
       <div class="secction-container">
         <div class="row d-flex align-items-center">
           <div class="col-md-6 col-sm-12">
@@ -581,7 +592,7 @@
           </div>
         </div>
         <div class="row text-center pt-2 pb-2">
-          <h5 style="color: #63f5aa">&lt Carlos Padron &gt</h5>
+          <h5 style="color: #63f5aa">&lt Carlos Padrón &gt</h5>
         </div>
       </div>
     </footer>
@@ -591,6 +602,10 @@
       integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
       crossorigin="anonymous"
     ></script> -->
+   
+    <script>
+      new WOW().init();
+      </script>
     <script src="js/index.js"></script>
   </body>
 </html>
