@@ -1,10 +1,14 @@
 const navSlide = () => {
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".nav-links");
+  const navbar = document.querySelector("nav");
+  const body = document.querySelector('body')
 
   burger.addEventListener("click", () => {
     nav.classList.toggle("nav-active");
     burger.classList.toggle("toggle");
+    //navbar.classList.toggle('overflow')
+    //body.classList.toggle("prevent-overflow");
   });
 };
 
@@ -98,16 +102,14 @@ function contactAnimation() {
 
 function heroAnimation() {
   const heroImg = document.querySelector(".hero-img");
-  const body = document.querySelector('body')
   heroImg.classList.add("animate__animated", "animate__fadeIn");
   heroImg.classList.remove("d-none");
-
-  body.style.overflowX = 'hidden'
+  
 }
 
 function setNavActiveClass() {
   let navLinks = document.querySelectorAll(".nav-links a");
-  
+
   console.log(navLinks);
 
   navLinks.forEach((link) => {
@@ -119,7 +121,7 @@ function setNavActiveClass() {
       if (activeLink != undefined) {
         activeLink.classList.remove("active");
         link.classList.add("active");
-      }else{
+      } else {
         link.classList.add("active");
       }
     });
