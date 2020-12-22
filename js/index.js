@@ -98,9 +98,11 @@ function contactAnimation() {
 
 function heroAnimation() {
   const heroImg = document.querySelector(".hero-img");
-
+  const body = document.querySelector('body')
   heroImg.classList.add("animate__animated", "animate__fadeIn");
   heroImg.classList.remove("d-none");
+
+  body.style.overflowX = 'hidden'
 }
 
 function setNavActiveClass() {
