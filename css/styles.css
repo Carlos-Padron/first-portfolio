@@ -73,7 +73,29 @@ h4 {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
+a:link {
+  color: transparent;
+}
+
+/* visited link */
+a:visited {
+  color: transparent;
+}
+
+/* mouse over link */
+a:hover {
+  color: transparent;
+}
+
+/* selected link */
+a:active {
+  color: transparent;
+}
 .secction-container {
   margin-left: 35px;
   margin-right: 35px;
@@ -275,7 +297,7 @@ ul {
 
   #hero {
     height: auto;
-    padding-bottom: 2rem ;
+    padding-bottom: 2rem;
     min-height: 800px;
   }
 }
@@ -483,8 +505,5 @@ ul {
 
   .footer-end {
     justify-content: center;
-
   }
 }
-
-
